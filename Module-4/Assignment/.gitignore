@@ -1,0 +1,30 @@
+# Data files (too large for GitHub)
+*.csv
+*.zip
+
+# Model files
+*.h5
+*.keras
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.tex
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# Output directories
+*_files/
+
+# Execution logs
+execution.log
