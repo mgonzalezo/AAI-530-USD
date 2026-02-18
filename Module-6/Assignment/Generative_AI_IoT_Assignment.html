@@ -7517,7 +7517,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Assignment-6.1:-Pre-Trained-Generative-Model-for-IoT-Applications">Assignment 6.1: Pre-Trained Generative Model for IoT Applications<a class="anchor-link" href="#Assignment-6.1:-Pre-Trained-Generative-Model-for-IoT-Applications">¶</a></h1><h2 id="Daily-RAN-Network-Health-Report-Generator">Daily RAN Network Health Report Generator<a class="anchor-link" href="#Daily-RAN-Network-Health-Report-Generator">¶</a></h2><p><strong>Student</strong>: Marco Gonzalez<br/>
+<h1 id="Assignment-6.1:-Pre-Trained-Generative-Model-for-IoT-Applications">Assignment 6.1: Pre-Trained Generative Model for IoT Applications<a class="anchor-link" href="#Assignment-6.1:-Pre-Trained-Generative-Model-for-IoT-Applications">¶</a></h1><h2 id="Daily-NB-IoT-Core-Network-Health-Report-Generator">Daily NB-IoT Core Network Health Report Generator<a class="anchor-link" href="#Daily-NB-IoT-Core-Network-Health-Report-Generator">¶</a></h2><p><strong>Student</strong>: Marco Gonzalez<br/>
 <strong>Course</strong>: AAI-530 - Introduction to IoT<br/>
 <strong>Date</strong>: February 2026</p>
 </div>
@@ -7531,23 +7531,24 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h2 id="Use-Case-Description">Use Case Description<a class="anchor-link" href="#Use-Case-Description">¶</a></h2><h3 id="IoT-Application:-Automated-RAN-Network-Health-Reporting">IoT Application: Automated RAN Network Health Reporting<a class="anchor-link" href="#IoT-Application:-Automated-RAN-Network-Health-Reporting">¶</a></h3><p>This application demonstrates how generative AI can transform raw telemetry data from 5G Radio Access Network (RAN) IoT sensors into human-readable daily health reports for network operations teams.</p>
-<p><strong>Problem</strong>: Network operations centers monitor thousands of base stations generating millions of metrics daily. Human operators struggle to quickly identify critical issues and trends from raw numerical data.</p>
+<h2 id="Use-Case-Description">Use Case Description<a class="anchor-link" href="#Use-Case-Description">¶</a></h2><h3 id="IoT-Application:-Automated-NB-IoT-Core-Network-Health-Reporting">IoT Application: Automated NB-IoT Core Network Health Reporting<a class="anchor-link" href="#IoT-Application:-Automated-NB-IoT-Core-Network-Health-Reporting">¶</a></h3><p>This application demonstrates how generative AI can transform raw telemetry data from Narrowband IoT (NB-IoT) Core network infrastructure into human-readable daily health reports for network operations teams.</p>
+<p><strong>Problem</strong>: Network operations centers monitor NB-IoT Core networks supporting millions of low-power IoT devices (smart meters, sensors, trackers). Core network elements generate massive volumes of telemetry data covering device attach procedures, session management, data throughput, and power optimization features. Human operators struggle to quickly identify issues affecting IoT device connectivity and performance from raw numerical metrics.</p>
 <p><strong>Solution</strong>: An automated system that:</p>
 <ol>
-<li>Collects 24-hour aggregated metrics from RAN IoT sensors (cell towers)</li>
+<li>Collects 24-hour aggregated metrics from NB-IoT Core network elements (MME, S-GW, P-GW, HSS)</li>
 <li>Structures the data in JSON format</li>
 <li>Sends the data to a generative AI model via API</li>
 <li>Receives a natural language summary highlighting critical issues, trends, and recommended actions</li>
 </ol>
 <p><strong>Benefits</strong>:</p>
 <ul>
-<li>Reduces time to identify network issues from hours to seconds</li>
-<li>Makes technical metrics accessible to non-technical stakeholders</li>
-<li>Provides actionable recommendations based on industry best practices</li>
-<li>Enables early warning of capacity or performance problems</li>
+<li>Reduces time to identify IoT connectivity issues from hours to seconds</li>
+<li>Makes technical Core network metrics accessible to non-technical stakeholders</li>
+<li>Provides actionable recommendations for IoT device performance optimization</li>
+<li>Enables early detection of capacity constraints or service degradation</li>
+<li>Monitors power-saving features (PSM, eDRX) critical for battery-powered IoT devices</li>
 </ul>
-<p>This type of AI-powered reporting is increasingly used in IoT telemetry applications across industries including telecommunications, industrial IoT, smart cities, and energy management systems.</p>
+<p>This type of AI-powered reporting is increasingly used in IoT Core network telemetry applications across industries including smart cities, utilities, agriculture, asset tracking, and industrial monitoring.</p>
 </div>
 </div>
 </div>
@@ -7626,14 +7627,17 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
-<h2 id="Sample-RAN-Telemetry-Data">Sample RAN Telemetry Data<a class="anchor-link" href="#Sample-RAN-Telemetry-Data">¶</a></h2><p>This JSON structure represents the type of aggregated daily metrics that would be produced by an IoT monitoring system collecting data from 5G base stations.</p>
-<p><strong>Data collected by IoT sensors</strong>:</p>
+<h2 id="Sample-NB-IoT-Core-Telemetry-Data">Sample NB-IoT Core Telemetry Data<a class="anchor-link" href="#Sample-NB-IoT-Core-Telemetry-Data">¶</a></h2><p>This JSON structure represents the type of aggregated daily metrics that would be produced by an IoT monitoring system collecting data from NB-IoT Core network elements.</p>
+<p><strong>Data collected from Core network IoT monitoring</strong>:</p>
 <ul>
-<li>Cell site performance metrics (throughput, latency, packet loss)</li>
-<li>Resource utilization (CPU, memory, bandwidth)</li>
-<li>Quality of Service indicators (handover success rate, call drops)</li>
-<li>Alarm and alert counts</li>
-<li>User traffic patterns</li>
+<li>Device attach and detach procedures (success rates, failures)</li>
+<li>PDN session establishment and teardown metrics</li>
+<li>Uplink/downlink data volumes per device category</li>
+<li>Power saving mode (PSM) and extended discontinuous reception (eDRX) usage</li>
+<li>MME (Mobility Management Entity) performance metrics</li>
+<li>Gateway (S-GW/P-GW) throughput and session counts</li>
+<li>HSS (Home Subscriber Server) authentication metrics</li>
+<li>Coverage enhancement level distribution</li>
 </ul>
 </div>
 </div>
@@ -7646,66 +7650,116 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Sample daily telemetry data from RAN IoT monitoring system</span>
-<span class="n">ran_telemetry_data</span> <span class="o">=</span> <span class="p">{</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Sample daily telemetry data from NB-IoT Core monitoring system</span>
+<span class="n">nbiot_core_telemetry_data</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">"report_date"</span><span class="p">:</span> <span class="s2">"2026-02-17"</span><span class="p">,</span>
-    <span class="s2">"network_id"</span><span class="p">:</span> <span class="s2">"Metro-West-Cluster-01"</span><span class="p">,</span>
-    <span class="s2">"total_cells"</span><span class="p">:</span> <span class="mi">247</span><span class="p">,</span>
-    <span class="s2">"summary_metrics"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"avg_throughput_mbps"</span><span class="p">:</span> <span class="mf">485.3</span><span class="p">,</span>
-        <span class="s2">"avg_latency_ms"</span><span class="p">:</span> <span class="mf">12.4</span><span class="p">,</span>
-        <span class="s2">"avg_packet_loss_pct"</span><span class="p">:</span> <span class="mf">0.18</span><span class="p">,</span>
-        <span class="s2">"avg_cpu_utilization_pct"</span><span class="p">:</span> <span class="mf">67.2</span><span class="p">,</span>
-        <span class="s2">"avg_resource_block_utilization_pct"</span><span class="p">:</span> <span class="mf">73.8</span><span class="p">,</span>
-        <span class="s2">"total_active_users"</span><span class="p">:</span> <span class="mi">142380</span><span class="p">,</span>
-        <span class="s2">"peak_concurrent_users"</span><span class="p">:</span> <span class="mi">18560</span>
+    <span class="s2">"network_id"</span><span class="p">:</span> <span class="s2">"Metro-NB-IoT-Core-01"</span><span class="p">,</span>
+    <span class="s2">"core_network_elements"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"mme_count"</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">"sgw_count"</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+        <span class="s2">"pgw_count"</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+        <span class="s2">"hss_count"</span><span class="p">:</span> <span class="mi">2</span>
     <span class="p">},</span>
-    <span class="s2">"quality_indicators"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"handover_success_rate_pct"</span><span class="p">:</span> <span class="mf">97.2</span><span class="p">,</span>
-        <span class="s2">"call_drop_rate_pct"</span><span class="p">:</span> <span class="mf">0.45</span><span class="p">,</span>
-        <span class="s2">"coverage_availability_pct"</span><span class="p">:</span> <span class="mf">99.87</span><span class="p">,</span>
-        <span class="s2">"avg_signal_strength_rsrp_dbm"</span><span class="p">:</span> <span class="o">-</span><span class="mf">82.3</span>
+    <span class="s2">"device_metrics"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"total_registered_devices"</span><span class="p">:</span> <span class="mi">2847630</span><span class="p">,</span>
+        <span class="s2">"active_devices_24h"</span><span class="p">:</span> <span class="mi">1923450</span><span class="p">,</span>
+        <span class="s2">"new_registrations_24h"</span><span class="p">:</span> <span class="mi">12340</span><span class="p">,</span>
+        <span class="s2">"deregistrations_24h"</span><span class="p">:</span> <span class="mi">8920</span><span class="p">,</span>
+        <span class="s2">"devices_using_psm"</span><span class="p">:</span> <span class="mi">2156780</span><span class="p">,</span>
+        <span class="s2">"devices_using_edrx"</span><span class="p">:</span> <span class="mi">1834920</span>
+    <span class="p">},</span>
+    <span class="s2">"attach_procedures"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"total_attach_attempts"</span><span class="p">:</span> <span class="mi">487650</span><span class="p">,</span>
+        <span class="s2">"successful_attaches"</span><span class="p">:</span> <span class="mi">478320</span><span class="p">,</span>
+        <span class="s2">"attach_success_rate_pct"</span><span class="p">:</span> <span class="mf">98.09</span><span class="p">,</span>
+        <span class="s2">"failed_attaches"</span><span class="p">:</span> <span class="mi">9330</span><span class="p">,</span>
+        <span class="s2">"avg_attach_duration_ms"</span><span class="p">:</span> <span class="mi">3450</span><span class="p">,</span>
+        <span class="s2">"timeout_failures"</span><span class="p">:</span> <span class="mi">2140</span><span class="p">,</span>
+        <span class="s2">"authentication_failures"</span><span class="p">:</span> <span class="mi">890</span><span class="p">,</span>
+        <span class="s2">"network_reject_failures"</span><span class="p">:</span> <span class="mi">6300</span>
+    <span class="p">},</span>
+    <span class="s2">"session_management"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"pdn_connection_attempts"</span><span class="p">:</span> <span class="mi">523470</span><span class="p">,</span>
+        <span class="s2">"successful_pdn_connections"</span><span class="p">:</span> <span class="mi">518960</span><span class="p">,</span>
+        <span class="s2">"pdn_success_rate_pct"</span><span class="p">:</span> <span class="mf">99.14</span><span class="p">,</span>
+        <span class="s2">"active_pdn_sessions"</span><span class="p">:</span> <span class="mi">1867230</span><span class="p">,</span>
+        <span class="s2">"avg_session_setup_time_ms"</span><span class="p">:</span> <span class="mi">1870</span><span class="p">,</span>
+        <span class="s2">"session_drop_rate_pct"</span><span class="p">:</span> <span class="mf">0.08</span>
+    <span class="p">},</span>
+    <span class="s2">"data_traffic"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"total_uplink_gb"</span><span class="p">:</span> <span class="mf">8945.6</span><span class="p">,</span>
+        <span class="s2">"total_downlink_gb"</span><span class="p">:</span> <span class="mf">3287.4</span><span class="p">,</span>
+        <span class="s2">"avg_uplink_per_device_kb"</span><span class="p">:</span> <span class="mf">4.8</span><span class="p">,</span>
+        <span class="s2">"avg_downlink_per_device_kb"</span><span class="p">:</span> <span class="mf">1.7</span><span class="p">,</span>
+        <span class="s2">"peak_concurrent_sessions"</span><span class="p">:</span> <span class="mi">892340</span>
+    <span class="p">},</span>
+    <span class="s2">"mme_performance"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"avg_cpu_utilization_pct"</span><span class="p">:</span> <span class="mf">42.3</span><span class="p">,</span>
+        <span class="s2">"avg_memory_utilization_pct"</span><span class="p">:</span> <span class="mf">58.7</span><span class="p">,</span>
+        <span class="s2">"control_plane_messages_per_sec"</span><span class="p">:</span> <span class="mi">1840</span><span class="p">,</span>
+        <span class="s2">"s1_interface_utilization_pct"</span><span class="p">:</span> <span class="mf">34.6</span>
+    <span class="p">},</span>
+    <span class="s2">"gateway_performance"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"sgw_avg_throughput_mbps"</span><span class="p">:</span> <span class="mf">2340.5</span><span class="p">,</span>
+        <span class="s2">"pgw_avg_throughput_mbps"</span><span class="p">:</span> <span class="mf">2156.8</span><span class="p">,</span>
+        <span class="s2">"s5_interface_utilization_pct"</span><span class="p">:</span> <span class="mf">38.2</span><span class="p">,</span>
+        <span class="s2">"sgi_interface_utilization_pct"</span><span class="p">:</span> <span class="mf">41.7</span>
+    <span class="p">},</span>
+    <span class="s2">"power_optimization"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"avg_psm_timer_value_hours"</span><span class="p">:</span> <span class="mi">24</span><span class="p">,</span>
+        <span class="s2">"avg_edrx_cycle_seconds"</span><span class="p">:</span> <span class="mf">163.84</span><span class="p">,</span>
+        <span class="s2">"devices_in_idle_mode_pct"</span><span class="p">:</span> <span class="mf">87.3</span><span class="p">,</span>
+        <span class="s2">"avg_battery_saving_mode_duration_hours"</span><span class="p">:</span> <span class="mf">18.6</span>
     <span class="p">},</span>
     <span class="s2">"alerts"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"critical"</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-        <span class="s2">"major"</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
-        <span class="s2">"minor"</span><span class="p">:</span> <span class="mi">28</span><span class="p">,</span>
-        <span class="s2">"warnings"</span><span class="p">:</span> <span class="mi">56</span>
+        <span class="s2">"critical"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s2">"major"</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+        <span class="s2">"minor"</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+        <span class="s2">"warnings"</span><span class="p">:</span> <span class="mi">34</span>
     <span class="p">},</span>
     <span class="s2">"top_issues"</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">"cell_id"</span><span class="p">:</span> <span class="s2">"CELL-089"</span><span class="p">,</span>
-            <span class="s2">"issue"</span><span class="p">:</span> <span class="s2">"High CPU utilization"</span><span class="p">,</span>
+            <span class="s2">"component"</span><span class="p">:</span> <span class="s2">"MME-03"</span><span class="p">,</span>
+            <span class="s2">"issue"</span><span class="p">:</span> <span class="s2">"High authentication failure rate"</span><span class="p">,</span>
             <span class="s2">"severity"</span><span class="p">:</span> <span class="s2">"critical"</span><span class="p">,</span>
-            <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"94.2</span><span class="si">% a</span><span class="s2">vg"</span><span class="p">,</span>
-            <span class="s2">"duration_hours"</span><span class="p">:</span> <span class="mf">8.3</span>
+            <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"8.2</span><span class="si">% f</span><span class="s2">ailure rate"</span><span class="p">,</span>
+            <span class="s2">"affected_devices"</span><span class="p">:</span> <span class="mi">4830</span><span class="p">,</span>
+            <span class="s2">"duration_hours"</span><span class="p">:</span> <span class="mf">6.4</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">"cell_id"</span><span class="p">:</span> <span class="s2">"CELL-156"</span><span class="p">,</span>
-            <span class="s2">"issue"</span><span class="p">:</span> <span class="s2">"Elevated packet loss"</span><span class="p">,</span>
+            <span class="s2">"component"</span><span class="p">:</span> <span class="s2">"PGW-02"</span><span class="p">,</span>
+            <span class="s2">"issue"</span><span class="p">:</span> <span class="s2">"Elevated SGi interface utilization"</span><span class="p">,</span>
             <span class="s2">"severity"</span><span class="p">:</span> <span class="s2">"major"</span><span class="p">,</span>
-            <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"2.1</span><span class="si">% lo</span><span class="s2">ss rate"</span><span class="p">,</span>
-            <span class="s2">"duration_hours"</span><span class="p">:</span> <span class="mf">4.7</span>
+            <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"78</span><span class="si">% u</span><span class="s2">tilization"</span><span class="p">,</span>
+            <span class="s2">"impact"</span><span class="p">:</span> <span class="s2">"Potential throughput degradation"</span><span class="p">,</span>
+            <span class="s2">"duration_hours"</span><span class="p">:</span> <span class="mf">3.2</span>
         <span class="p">},</span>
         <span class="p">{</span>
-            <span class="s2">"cell_id"</span><span class="p">:</span> <span class="s2">"CELL-223"</span><span class="p">,</span>
-            <span class="s2">"issue"</span><span class="p">:</span> <span class="s2">"Handover failures"</span><span class="p">,</span>
+            <span class="s2">"component"</span><span class="p">:</span> <span class="s2">"S-GW-05"</span><span class="p">,</span>
+            <span class="s2">"issue"</span><span class="p">:</span> <span class="s2">"Session setup delays"</span><span class="p">,</span>
             <span class="s2">"severity"</span><span class="p">:</span> <span class="s2">"major"</span><span class="p">,</span>
-            <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"12</span><span class="si">% f</span><span class="s2">ailure rate"</span><span class="p">,</span>
-            <span class="s2">"duration_hours"</span><span class="p">:</span> <span class="mf">2.1</span>
+            <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"4.2s avg setup time"</span><span class="p">,</span>
+            <span class="s2">"affected_sessions"</span><span class="p">:</span> <span class="mi">12450</span><span class="p">,</span>
+            <span class="s2">"duration_hours"</span><span class="p">:</span> <span class="mf">2.8</span>
         <span class="p">}</span>
     <span class="p">],</span>
     <span class="s2">"capacity_trends"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">"resource_utilization_trend"</span><span class="p">:</span> <span class="s2">"increasing"</span><span class="p">,</span>
-        <span class="s2">"week_over_week_growth_pct"</span><span class="p">:</span> <span class="mf">3.2</span><span class="p">,</span>
-        <span class="s2">"cells_above_80pct_utilization"</span><span class="p">:</span> <span class="mi">34</span><span class="p">,</span>
-        <span class="s2">"estimated_days_to_capacity"</span><span class="p">:</span> <span class="mi">45</span>
+        <span class="s2">"device_growth_trend"</span><span class="p">:</span> <span class="s2">"increasing"</span><span class="p">,</span>
+        <span class="s2">"week_over_week_device_growth_pct"</span><span class="p">:</span> <span class="mf">2.8</span><span class="p">,</span>
+        <span class="s2">"mme_capacity_utilization_pct"</span><span class="p">:</span> <span class="mi">42</span><span class="p">,</span>
+        <span class="s2">"gateway_capacity_utilization_pct"</span><span class="p">:</span> <span class="mi">45</span><span class="p">,</span>
+        <span class="s2">"estimated_days_to_capacity"</span><span class="p">:</span> <span class="mi">120</span>
+    <span class="p">},</span>
+    <span class="s2">"coverage_enhancement"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"ce_level_0_devices_pct"</span><span class="p">:</span> <span class="mf">68.4</span><span class="p">,</span>
+        <span class="s2">"ce_level_1_devices_pct"</span><span class="p">:</span> <span class="mf">24.3</span><span class="p">,</span>
+        <span class="s2">"ce_level_2_devices_pct"</span><span class="p">:</span> <span class="mf">7.3</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="c1"># Display the data structure</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Sample RAN Telemetry Data (JSON):"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">ran_telemetry_data</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Sample NB-IoT Core Telemetry Data (JSON):"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">nbiot_core_telemetry_data</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -7721,10 +7775,10 @@ a.anchor-link {
 <hr/>
 <h2 id="Generative-AI-Prompt-Engineering">Generative AI Prompt Engineering<a class="anchor-link" href="#Generative-AI-Prompt-Engineering">¶</a></h2><p>The prompt instructs the AI model how to interpret the telemetry data and generate a useful report. Key elements:</p>
 <ol>
-<li><strong>Role definition</strong>: Act as a network operations analyst</li>
-<li><strong>Task specification</strong>: Generate a daily health report</li>
+<li><strong>Role definition</strong>: Act as a Core network operations analyst specializing in NB-IoT</li>
+<li><strong>Task specification</strong>: Generate a daily health report for IoT Core infrastructure</li>
 <li><strong>Output format</strong>: Structured sections with executive summary, critical issues, trends, and recommendations</li>
-<li><strong>Context</strong>: Include industry-specific knowledge about RAN performance thresholds</li>
+<li><strong>Context</strong>: Include industry-specific knowledge about NB-IoT Core performance thresholds</li>
 <li><strong>Tone</strong>: Professional but accessible to non-technical stakeholders</li>
 </ol>
 </div>
@@ -7740,10 +7794,10 @@ a.anchor-link {
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">generate_network_report</span><span class="p">(</span><span class="n">telemetry_data</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
-<span class="sd">    Generate a daily network health report using OpenAI GPT-4.</span>
+<span class="sd">    Generate a daily NB-IoT Core network health report using OpenAI GPT-4.</span>
 <span class="sd">    </span>
 <span class="sd">    Args:</span>
-<span class="sd">        telemetry_data: Dictionary containing RAN telemetry metrics</span>
+<span class="sd">        telemetry_data: Dictionary containing NB-IoT Core telemetry metrics</span>
 <span class="sd">        </span>
 <span class="sd">    Returns:</span>
 <span class="sd">        String containing the generated report</span>
@@ -7753,29 +7807,32 @@ a.anchor-link {
     <span class="n">telemetry_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">telemetry_data</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
     
     <span class="c1"># Create the system prompt</span>
-    <span class="n">system_prompt</span> <span class="o">=</span> <span class="s2">"""You are an expert network operations analyst for a telecommunications company. </span>
-<span class="s2">Your role is to analyze daily telemetry data from 5G Radio Access Network (RAN) infrastructure and </span>
-<span class="s2">generate clear, actionable daily health reports for network operations teams.</span>
+    <span class="n">system_prompt</span> <span class="o">=</span> <span class="s2">"""You are an expert Core network operations analyst for a telecommunications company </span>
+<span class="s2">specializing in Narrowband IoT (NB-IoT) infrastructure. Your role is to analyze daily telemetry data </span>
+<span class="s2">from NB-IoT Core network elements (MME, S-GW, P-GW, HSS) and generate clear, actionable daily health </span>
+<span class="s2">reports for network operations teams managing millions of IoT devices.</span>
 
 <span class="s2">Use the following performance thresholds as reference:</span>
-<span class="s2">- Good throughput: &gt;400 Mbps</span>
-<span class="s2">- Good latency: &lt;15 ms</span>
-<span class="s2">- Acceptable packet loss: &lt;0.5%</span>
-<span class="s2">- Healthy CPU utilization: &lt;75%</span>
-<span class="s2">- Good handover success: &gt;98%</span>
-<span class="s2">- Acceptable call drop rate: &lt;0.5%</span>
+<span class="s2">- Good attach success rate: &gt;98%</span>
+<span class="s2">- Good PDN connection success rate: &gt;99%</span>
+<span class="s2">- Acceptable session drop rate: &lt;0.1%</span>
+<span class="s2">- Healthy MME CPU utilization: &lt;60%</span>
+<span class="s2">- Good attach duration: &lt;4 seconds</span>
+<span class="s2">- Acceptable session setup time: &lt;2 seconds</span>
+<span class="s2">- Good authentication failure rate: &lt;2%</span>
 
-<span class="s2">Generate reports that are professional, concise, and highlight actionable insights."""</span>
+<span class="s2">Generate reports that are professional, concise, and highlight actionable insights for IoT device </span>
+<span class="s2">connectivity and Core network performance."""</span>
     
     <span class="c1"># Create the user prompt with the telemetry data</span>
-    <span class="n">user_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""Please analyze the following 24-hour RAN network telemetry data and generate a </span>
+    <span class="n">user_prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""Please analyze the following 24-hour NB-IoT Core network telemetry data and generate a </span>
 <span class="s2">comprehensive daily health report.</span>
 
 <span class="s2">The report should include:</span>
-<span class="s2">1. Executive Summary (2-3 sentences on overall network health)</span>
+<span class="s2">1. Executive Summary (2-3 sentences on overall Core network and IoT device connectivity health)</span>
 <span class="s2">2. Key Performance Metrics (highlight metrics that are outside normal ranges)</span>
 <span class="s2">3. Critical Issues (list of urgent problems requiring immediate attention)</span>
-<span class="s2">4. Capacity and Trends (analysis of utilization trends and capacity planning)</span>
+<span class="s2">4. IoT Device Trends (analysis of device growth, power optimization usage, and capacity planning)</span>
 <span class="s2">5. Recommendations (specific actions for the operations team)</span>
 
 <span class="s2">Telemetry Data:</span>
@@ -7784,7 +7841,7 @@ a.anchor-link {
 <span class="s2">Format the report in markdown with clear sections and bullet points where appropriate."""</span>
     
     <span class="c1"># Call OpenAI API</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Calling OpenAI API to generate network health report...</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Calling OpenAI API to generate NB-IoT Core network health report...</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
     
     <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
         <span class="n">model</span><span class="o">=</span><span class="s2">"gpt-4"</span><span class="p">,</span>  <span class="c1"># Using GPT-4 for better analytical capabilities</span>
@@ -7826,11 +7883,11 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Generate the report</span>
-<span class="n">daily_report</span> <span class="o">=</span> <span class="n">generate_network_report</span><span class="p">(</span><span class="n">ran_telemetry_data</span><span class="p">)</span>
+<span class="n">daily_report</span> <span class="o">=</span> <span class="n">generate_network_report</span><span class="p">(</span><span class="n">nbiot_core_telemetry_data</span><span class="p">)</span>
 
 <span class="c1"># Display the generated report</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"GENERATED DAILY NETWORK HEALTH REPORT"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"GENERATED DAILY NB-IoT CORE NETWORK HEALTH REPORT"</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">daily_report</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"="</span><span class="o">*</span><span class="mi">80</span><span class="p">)</span>
@@ -7848,83 +7905,118 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/>
 <h2 id="Example-Output">Example Output<a class="anchor-link" href="#Example-Output">¶</a></h2><p>Since the actual API call requires a valid API key and incurs costs, here's an example of what the generated report would look like:</p>
-<div class="highlight"><pre><span></span><span class="gh"># Daily Network Health Report</span>
-Network: Metro-West-Cluster-01  
+<div class="highlight"><pre><span></span><span class="gh"># Daily NB-IoT Core Network Health Report</span>
+Network: Metro-NB-IoT-Core-01  
 Date: February 17, 2026  
-Total Cells Monitored: 247
+Registered IoT Devices: 2,847,630
 
 <span class="gu">## Executive Summary</span>
 
-The Metro-West-Cluster-01 network is operating at satisfactory levels overall, with 99.87% coverage availability and strong average throughput of 485.3 Mbps. However, 3 critical and 12 major alerts require immediate attention, primarily related to resource utilization approaching capacity thresholds. Capacity planning should be prioritized as 34 cells are operating above 80% resource utilization.
+The NB-IoT Core network is operating at satisfactory levels, successfully serving 2.8 million registered 
+IoT devices with 1.9 million active devices in the last 24 hours. However, 2 critical and 7 major alerts 
+require immediate attention, primarily related to authentication failures on MME-03 and interface utilization 
+on PGW-02. Power optimization features (PSM, eDRX) show strong adoption at 75% and 64% respectively, indicating 
+effective battery life extension for IoT devices.
 
 <span class="gu">## Key Performance Metrics</span>
 
 Performing Well:
-<span class="k">-</span><span class="w"> </span>Throughput: 485.3 Mbps average (exceeds 400 Mbps target)
-<span class="k">-</span><span class="w"> </span>Latency: 12.4 ms average (within 15 ms target)
-<span class="k">-</span><span class="w"> </span>Packet Loss: 0.18% average (below 0.5% threshold)
-<span class="k">-</span><span class="w"> </span>Coverage Availability: 99.87%
+<span class="k">-</span><span class="w"> </span>PDN Connection Success Rate: 99.14% (exceeds 99% target)
+<span class="k">-</span><span class="w"> </span>Session Drop Rate: 0.08% (well below 0.1% threshold)
+<span class="k">-</span><span class="w"> </span>Average Attach Duration: 3.45 seconds (within 4 second target)
+<span class="k">-</span><span class="w"> </span>MME CPU Utilization: 42.3% average (healthy, below 60% threshold)
+<span class="k">-</span><span class="w"> </span>Device Growth: 2.8% week-over-week (sustainable growth)
 
 Requires Attention:
-<span class="k">-</span><span class="w"> </span>CPU Utilization: 67.2% average approaching 75% threshold (34 cells above 80%)
-<span class="k">-</span><span class="w"> </span>Resource Block Utilization: 73.8% indicating high demand
-<span class="k">-</span><span class="w"> </span>Handover Success Rate: 97.2% (below 98% target)
-<span class="k">-</span><span class="w"> </span>Call Drop Rate: 0.45% (acceptable but near 0.5% limit)
+<span class="k">-</span><span class="w"> </span>Attach Success Rate: 98.09% (below 98% target, marginal)
+<span class="k">-</span><span class="w"> </span>Authentication Failures: 890 failures (needs investigation)
+<span class="k">-</span><span class="w"> </span>S-GW-05 Session Setup Time: 4.2s average (exceeds 2s target)
+<span class="k">-</span><span class="w"> </span>PGW-02 SGi Interface: 78% utilization (approaching saturation)
 
 <span class="gu">## Critical Issues</span>
 
 CRITICAL - Immediate Action Required:
 
-<span class="k">1.</span> CELL-089: Sustained High CPU Utilization
-<span class="w">   </span><span class="k">-</span><span class="w"> </span>Issue: CPU utilization at 94.2% for 8.3 hours
-<span class="w">   </span><span class="k">-</span><span class="w"> </span>Impact: Risk of service degradation, dropped connections
-<span class="w">   </span><span class="k">-</span><span class="w"> </span>Action: Immediate investigation; consider load balancing or traffic offload to neighboring cells
+<span class="k">1.</span> MME-03: High Authentication Failure Rate
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Issue: 8.2% authentication failure rate affecting 4,830 devices over 6.4 hours
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Impact: IoT devices unable to attach to network, service interruption
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Root Cause: Likely HSS synchronization issue or incorrect device credentials
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Action: Immediately investigate HSS-MME communication; verify authentication vectors; 
+     check for credential provisioning errors
 
 MAJOR Issues:
 
-<span class="k">2.</span> CELL-156: Elevated Packet Loss
-<span class="w">   </span><span class="k">-</span><span class="w"> </span>Issue: 2.1% packet loss rate for 4.7 hours
-<span class="w">   </span><span class="k">-</span><span class="w"> </span>Impact: Degraded user experience, potential video buffering, VoIP quality issues
-<span class="w">   </span><span class="k">-</span><span class="w"> </span>Action: Check backhaul connection integrity; investigate interference sources
+<span class="k">2.</span> PGW-02: Elevated SGi Interface Utilization
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Issue: 78% SGi interface utilization for 3.2 hours
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Impact: Potential throughput degradation for IoT data transmission to external networks
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Action: Monitor for continued growth; prepare to activate additional PGW capacity or 
+     redistribute traffic load
 
-<span class="k">3.</span> CELL-223: Handover Failures
-<span class="w">   </span><span class="k">-</span><span class="w"> </span>Issue: 12% handover failure rate for 2.1 hours
-<span class="w">   </span><span class="k">-</span><span class="w"> </span>Impact: Dropped calls during mobility, poor user experience in cell boundaries
-<span class="w">   </span><span class="k">-</span><span class="w"> </span>Action: Verify neighbor cell configuration; check antenna alignment and coverage overlap
+<span class="k">3.</span> S-GW-05: Session Setup Delays
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Issue: Average 4.2 second session setup time, affecting 12,450 sessions over 2.8 hours
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Impact: Delayed IoT device connectivity, increased battery drain during connection attempts
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Action: Investigate S5 interface latency; check S-GW-05 resource utilization; review 
+     recent configuration changes
 
-<span class="gu">## Capacity and Trends</span>
+<span class="gu">## IoT Device Trends</span>
+
+Device Population:
+<span class="k">-</span><span class="w"> </span>Total Registered Devices: 2,847,630
+<span class="k">-</span><span class="w"> </span>Active Devices (24h): 1,923,450 (67.5% activity rate)
+<span class="k">-</span><span class="w"> </span>New Registrations: 12,340 devices
+<span class="k">-</span><span class="w"> </span>Deregistrations: 8,920 devices
+<span class="k">-</span><span class="w"> </span>Net Growth: +3,420 devices daily
+
+Power Optimization Adoption:
+<span class="k">-</span><span class="w"> </span>PSM (Power Saving Mode): 2,156,780 devices (75.7% adoption)
+<span class="k">-</span><span class="w"> </span>eDRX (Extended Discontinuous Reception): 1,834,920 devices (64.4% adoption)
+<span class="k">-</span><span class="w"> </span>Devices in Idle Mode: 87.3% (excellent power efficiency)
+<span class="k">-</span><span class="w"> </span>Average PSM Timer: 24 hours (optimal for infrequent reporting applications)
+<span class="k">-</span><span class="w"> </span>Average eDRX Cycle: 163.84 seconds (balanced between latency and power saving)
+
+Coverage Enhancement Distribution:
+<span class="k">-</span><span class="w"> </span>CE Level 0 (Good Coverage): 68.4% of devices
+<span class="k">-</span><span class="w"> </span>CE Level 1 (Moderate Coverage): 24.3% of devices
+<span class="k">-</span><span class="w"> </span>CE Level 2 (Deep Coverage): 7.3% of devices
+
+Analysis: Strong power optimization adoption indicates successful battery life extension for IoT 
+devices. The 7.3% of devices in deep coverage (CE Level 2) should be monitored for potential 
+coverage improvements through additional base stations or antenna optimization.
 
 Capacity Status:
-<span class="k">-</span><span class="w"> </span>34 cells (13.8% of network) operating above 80% resource utilization
-<span class="k">-</span><span class="w"> </span>Week-over-week growth: +3.2% in resource utilization
-<span class="k">-</span><span class="w"> </span>Trend: Increasing demand (sustained upward trajectory)
-<span class="k">-</span><span class="w"> </span>Estimated time to capacity: Approximately 45 days at current growth rate
-
-Analysis: The consistent 3.2% weekly growth indicates strong subscriber growth or increased per-user data consumption. Without intervention, capacity constraints will begin affecting service quality within 6 weeks.
+<span class="k">-</span><span class="w"> </span>MME Capacity Utilization: 42% (ample headroom)
+<span class="k">-</span><span class="w"> </span>Gateway Capacity Utilization: 45% (ample headroom)
+<span class="k">-</span><span class="w"> </span>Estimated Days to Capacity: 120 days at current 2.8% weekly growth rate
 
 <span class="gu">## Recommendations</span>
 
 Immediate (Next 24 Hours):
-<span class="k">1.</span> Investigate and resolve CELL-089 CPU overload condition
-<span class="k">2.</span> Deploy field technician to CELL-156 to diagnose packet loss source
-<span class="k">3.</span> Reconfigure handover parameters for CELL-223 and neighbor cells
+<span class="k">1.</span> Escalate MME-03 authentication failure investigation to Core engineering team
+<span class="k">2.</span> Analyze HSS logs for authentication vector generation issues
+<span class="k">3.</span> Verify device credential provisioning for affected IMSI ranges
+<span class="k">4.</span> Implement temporary traffic offload from PGW-02 to PGW-01/03
 
 Short-term (Next 7 Days):
-<span class="k">4.</span> Review alarm escalation procedures - 99 total alerts (3 critical, 12 major) suggest potential systemic issues
-<span class="k">5.</span> Implement automated load balancing for cells exceeding 80% utilization
-<span class="k">6.</span> Schedule proactive maintenance for cells showing degraded handover performance
+<span class="k">5.</span> Conduct detailed performance analysis of S-GW-05 session setup latency
+<span class="k">6.</span> Review recent MME-03 software updates or configuration changes that may correlate with 
+   authentication failures
+<span class="k">7.</span> Implement automated alerting for authentication failure rate exceeding 3%
+<span class="k">8.</span> Schedule capacity planning review for PGW SGi interfaces
 
-Strategic (Next 30-45 Days):
-<span class="k">7.</span> Capacity Expansion Required: Begin planning for additional cell sites or carrier upgrades to address 45-day capacity timeline
-<span class="k">8.</span> Consider implementing dynamic spectrum sharing or carrier aggregation in high-demand areas
-<span class="k">9.</span> Evaluate deploying small cells in hotspot areas to offload traffic from macro cells
+Strategic (Next 30-60 Days):
+<span class="k">9.</span> Plan PGW capacity expansion to address growing SGi utilization (add PGW-05)
+<span class="k">10.</span> Evaluate HSS redundancy and failover mechanisms to prevent single-point authentication issues
+<span class="k">11.</span> Analyze CE Level 2 device locations for potential coverage enhancement opportunities
+<span class="k">12.</span> Continue monitoring device growth trend; current 120-day capacity runway provides adequate 
+    planning time for MME/Gateway expansion
 
 ---
 
 Next Report: February 18, 2026  
-On-Call Engineer: Contact NOC for escalations
+On-Call Engineer: Contact IoT Core NOC for escalations
 </pre></div>
-<p>This report demonstrates how generative AI transforms raw IoT telemetry data into actionable business intelligence for network operations teams.</p>
+<p>This report demonstrates how generative AI transforms raw NB-IoT Core telemetry data into actionable
+business intelligence for network operations teams managing millions of IoT devices.</p>
 </div>
 </div>
 </div>
@@ -8000,16 +8092,20 @@ On-Call Engineer: Contact NOC for escalations
 <li><strong>Reduce cognitive load</strong> for operators monitoring complex systems</li>
 <li><strong>Provide actionable recommendations</strong> based on domain knowledge</li>
 <li><strong>Enable non-technical stakeholders</strong> to understand IoT data</li>
-<li><strong>Scale to thousands of devices</strong> with minimal manual effort</li>
+<li><strong>Scale to millions of IoT devices</strong> with minimal manual effort</li>
 </ol>
 <p>The same pattern can be applied across IoT domains:</p>
 <ul>
+<li><strong>NB-IoT Core Networks</strong>: Device connectivity health summaries (as demonstrated)</li>
+<li><strong>Smart Utilities</strong>: Smart meter data aggregation and anomaly detection</li>
 <li><strong>Industrial IoT</strong>: Equipment health summaries from vibration sensors</li>
 <li><strong>Smart Cities</strong>: Traffic pattern analysis from connected infrastructure</li>
 <li><strong>Healthcare IoT</strong>: Patient vital sign summaries from wearables</li>
 <li><strong>Agriculture</strong>: Crop health reports from soil and weather sensors</li>
 </ul>
-<p>As IoT systems generate increasingly large volumes of data, generative AI will become essential for extracting value and enabling rapid decision-making.</p>
+<p>As IoT systems generate increasingly large volumes of data from millions of low-power devices, generative AI
+will become essential for extracting value and enabling rapid decision-making in Core network operations
+and device management.</p>
 </div>
 </div>
 </div>

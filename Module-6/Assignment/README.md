@@ -1,18 +1,19 @@
 # Assignment 6.1: Pre-Trained Generative Model for IoT
-## Daily RAN Network Health Report Generator
+## Daily NB-IoT Core Network Health Report Generator
 
 ### Overview
 
-This assignment demonstrates the integration of a pre-trained generative AI model (OpenAI GPT-4) with an IoT application for automated network health reporting in 5G Radio Access Networks.
+This assignment demonstrates the integration of a pre-trained generative AI model (OpenAI GPT-4) with an IoT application for automated network health reporting in Narrowband IoT (NB-IoT) Core networks.
 
 ### Use Case
 
-**Problem**: Network operations teams monitor thousands of 5G base stations generating massive volumes of telemetry data. Identifying critical issues and trends from raw metrics is time-consuming and requires expert knowledge.
+**Problem**: Network operations teams monitor NB-IoT Core networks supporting millions of low-power IoT devices (smart meters, sensors, trackers). Core network elements generate massive volumes of telemetry data covering device attach procedures, session management, and power optimization. Identifying critical issues affecting IoT device connectivity from raw metrics is time-consuming and requires expert knowledge.
 
-**Solution**: An automated system that uses generative AI to transform daily RAN telemetry data into clear, actionable health reports with:
+**Solution**: An automated system that uses generative AI to transform daily NB-IoT Core telemetry data into clear, actionable health reports with:
 - Executive summaries for leadership
-- Critical issue identification
-- Capacity trend analysis
+- Critical issue identification for IoT device connectivity
+- Device growth and capacity trend analysis
+- Power optimization monitoring (PSM, eDRX)
 - Specific operational recommendations
 
 ### Files
@@ -23,28 +24,31 @@ This assignment demonstrates the integration of a pre-trained generative AI mode
 
 ### Components
 
-✅ **IoT Use Case Description**: Daily RAN network health reporting for telecom operators
+✅ **IoT Use Case Description**: Daily NB-IoT Core network health reporting for telecom operators managing millions of IoT devices
 
 ✅ **API Connection**: OpenAI GPT-4 via official Python SDK
 
-✅ **Input Structure**: JSON telemetry data from RAN IoT sensors including:
-- Performance metrics (throughput, latency, packet loss)
-- Resource utilization (CPU, memory, bandwidth)
-- Quality indicators (handover success, call drops)
+✅ **Input Structure**: JSON telemetry data from NB-IoT Core network elements including:
+- Device attach and PDN session metrics (success rates, failures)
+- IoT device population statistics (2.8M+ devices)
+- Power optimization features (PSM, eDRX adoption)
+- MME, S-GW, P-GW, HSS performance metrics
+- Authentication and session management statistics
+- Coverage enhancement level distribution
 - Alerts and top issues
-- Capacity trends
+- Device growth and capacity trends
 
 ✅ **Prompt Engineering**: Structured prompts that instruct the AI model to:
-- Act as a network operations analyst
-- Apply domain-specific performance thresholds
-- Generate reports with specific sections
-- Provide actionable recommendations
+- Act as a Core network operations analyst specializing in NB-IoT
+- Apply domain-specific performance thresholds for IoT connectivity
+- Generate reports with specific sections focused on device health
+- Provide actionable recommendations for IoT Core optimization
 
 ✅ **Model Output**: Natural language daily health report with:
-- Executive summary
-- Key performance metrics
-- Critical issues requiring attention
-- Capacity analysis and trends
+- Executive summary of IoT device connectivity health
+- Key performance metrics for Core network elements
+- Critical issues affecting IoT devices
+- Device growth trends and power optimization analysis
 - Prioritized recommendations (immediate, short-term, strategic)
 
 ### Setup Instructions
@@ -95,19 +99,20 @@ The notebook includes a detailed example of the generated report showing how the
 ### Real-World Applicability
 
 This pattern is used in production IoT systems for:
-- **Telecommunications**: Daily network health reports (as demonstrated)
+- **NB-IoT Core Networks**: Daily device connectivity health reports (as demonstrated)
+- **Smart Utilities**: Smart meter aggregation and anomaly detection
 - **Industrial IoT**: Equipment health summaries from sensor data
-- **Smart Buildings**: Energy consumption reports for facility managers
+- **Smart Cities**: Asset tracking and infrastructure monitoring
 - **Healthcare**: Patient monitoring summaries from wearable devices
 - **Agriculture**: Crop health reports from soil and weather sensors
 
 ### Assignment Requirements Met
 
-✅ Quick description of model use (Daily RAN health reporting)
+✅ Quick description of model use (Daily NB-IoT Core health reporting for millions of IoT devices)
 ✅ Connection to generative AI API (OpenAI GPT-4)
 ✅ Code instructing model interaction (Structured prompts with JSON input)
-✅ Model output relevant to IoT use case (Example network health report)
-✅ Well-defined IoT application (5G RAN telemetry monitoring)
+✅ Model output relevant to IoT use case (Example Core network health report)
+✅ Well-defined IoT application (NB-IoT Core network telemetry monitoring)
 ✅ Successful API integration (Using official OpenAI Python SDK)
 
 ### Technologies Used
