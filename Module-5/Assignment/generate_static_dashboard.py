@@ -199,7 +199,7 @@ fig.add_trace(go.Table(
 # Update layout
 fig.update_layout(
     title={
-        'text': '<b>⚡ Smart Home Energy Monitoring Dashboard</b><br><sub>IoT System with ML-Powered Predictions | AAI-530 Module 5</sub>',
+        'text': '<b>⚡ Smart Home Energy Monitoring Dashboard</b>',
         'x': 0.5,
         'xanchor': 'center',
         'font': {'size': 24}
