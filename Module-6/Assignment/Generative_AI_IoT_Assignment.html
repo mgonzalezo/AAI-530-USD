@@ -7849,80 +7849,80 @@ a.anchor-link {
 <hr/>
 <h2 id="Example-Output">Example Output<a class="anchor-link" href="#Example-Output">¶</a></h2><p>Since the actual API call requires a valid API key and incurs costs, here's an example of what the generated report would look like:</p>
 <div class="highlight"><pre><span></span><span class="gh"># Daily Network Health Report</span>
-<span class="gs">**Network**</span>: Metro-West-Cluster-01  
-<span class="gs">**Date**</span>: February 17, 2026  
-<span class="gs">**Total Cells Monitored**</span>: 247
+Network: Metro-West-Cluster-01  
+Date: February 17, 2026  
+Total Cells Monitored: 247
 
 <span class="gu">## Executive Summary</span>
 
-The Metro-West-Cluster-01 network is operating at <span class="gs">**satisfactory**</span> levels overall, with 99.87% coverage availability and strong average throughput of 485.3 Mbps. However, <span class="gs">**3 critical and 12 major alerts**</span> require immediate attention, primarily related to resource utilization approaching capacity thresholds. Capacity planning should be prioritized as 34 cells are operating above 80% resource utilization.
+The Metro-West-Cluster-01 network is operating at satisfactory levels overall, with 99.87% coverage availability and strong average throughput of 485.3 Mbps. However, 3 critical and 12 major alerts require immediate attention, primarily related to resource utilization approaching capacity thresholds. Capacity planning should be prioritized as 34 cells are operating above 80% resource utilization.
 
 <span class="gu">## Key Performance Metrics</span>
 
-<span class="gs">**✓ Performing Well:**</span>
-<span class="k">-</span><span class="w"> </span><span class="gs">**Throughput**</span>: 485.3 Mbps average (exceeds 400 Mbps target)
-<span class="k">-</span><span class="w"> </span><span class="gs">**Latency**</span>: 12.4 ms average (within 15 ms target)
-<span class="k">-</span><span class="w"> </span><span class="gs">**Packet Loss**</span>: 0.18% average (below 0.5% threshold)
-<span class="k">-</span><span class="w"> </span><span class="gs">**Coverage Availability**</span>: 99.87% (excellent)
+Performing Well:
+<span class="k">-</span><span class="w"> </span>Throughput: 485.3 Mbps average (exceeds 400 Mbps target)
+<span class="k">-</span><span class="w"> </span>Latency: 12.4 ms average (within 15 ms target)
+<span class="k">-</span><span class="w"> </span>Packet Loss: 0.18% average (below 0.5% threshold)
+<span class="k">-</span><span class="w"> </span>Coverage Availability: 99.87%
 
-<span class="gs">**⚠ Requires Attention:**</span>
-<span class="k">-</span><span class="w"> </span><span class="gs">**CPU Utilization**</span>: 67.2% average approaching 75% threshold (34 cells above 80%)
-<span class="k">-</span><span class="w"> </span><span class="gs">**Resource Block Utilization**</span>: 73.8% indicating high demand
-<span class="k">-</span><span class="w"> </span><span class="gs">**Handover Success Rate**</span>: 97.2% (below 98% target)
-<span class="k">-</span><span class="w"> </span><span class="gs">**Call Drop Rate**</span>: 0.45% (acceptable but near 0.5% limit)
+Requires Attention:
+<span class="k">-</span><span class="w"> </span>CPU Utilization: 67.2% average approaching 75% threshold (34 cells above 80%)
+<span class="k">-</span><span class="w"> </span>Resource Block Utilization: 73.8% indicating high demand
+<span class="k">-</span><span class="w"> </span>Handover Success Rate: 97.2% (below 98% target)
+<span class="k">-</span><span class="w"> </span>Call Drop Rate: 0.45% (acceptable but near 0.5% limit)
 
 <span class="gu">## Critical Issues</span>
 
-<span class="gs">**🔴 Critical (Immediate Action Required):**</span>
+CRITICAL - Immediate Action Required:
 
-<span class="k">1.</span> <span class="gs">**CELL-089: Sustained High CPU Utilization**</span>
-<span class="w">   </span><span class="k">-</span><span class="w"> </span><span class="gs">**Issue**</span>: CPU utilization at 94.2% for 8.3 hours
-<span class="w">   </span><span class="k">-</span><span class="w"> </span><span class="gs">**Impact**</span>: Risk of service degradation, dropped connections
-<span class="w">   </span><span class="k">-</span><span class="w"> </span><span class="gs">**Action**</span>: Immediate investigation; consider load balancing or traffic offload to neighboring cells
+<span class="k">1.</span> CELL-089: Sustained High CPU Utilization
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Issue: CPU utilization at 94.2% for 8.3 hours
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Impact: Risk of service degradation, dropped connections
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Action: Immediate investigation; consider load balancing or traffic offload to neighboring cells
 
-<span class="gs">**🟠 Major Issues:**</span>
+MAJOR Issues:
 
-<span class="k">2.</span> <span class="gs">**CELL-156: Elevated Packet Loss**</span>
-<span class="w">   </span><span class="k">-</span><span class="w"> </span><span class="gs">**Issue**</span>: 2.1% packet loss rate for 4.7 hours
-<span class="w">   </span><span class="k">-</span><span class="w"> </span><span class="gs">**Impact**</span>: Degraded user experience, potential video buffering, VoIP quality issues
-<span class="w">   </span><span class="k">-</span><span class="w"> </span><span class="gs">**Action**</span>: Check backhaul connection integrity; investigate interference sources
+<span class="k">2.</span> CELL-156: Elevated Packet Loss
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Issue: 2.1% packet loss rate for 4.7 hours
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Impact: Degraded user experience, potential video buffering, VoIP quality issues
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Action: Check backhaul connection integrity; investigate interference sources
 
-<span class="k">3.</span> <span class="gs">**CELL-223: Handover Failures**</span>
-<span class="w">   </span><span class="k">-</span><span class="w"> </span><span class="gs">**Issue**</span>: 12% handover failure rate for 2.1 hours
-<span class="w">   </span><span class="k">-</span><span class="w"> </span><span class="gs">**Impact**</span>: Dropped calls during mobility, poor user experience in cell boundaries
-<span class="w">   </span><span class="k">-</span><span class="w"> </span><span class="gs">**Action**</span>: Verify neighbor cell configuration; check antenna alignment and coverage overlap
+<span class="k">3.</span> CELL-223: Handover Failures
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Issue: 12% handover failure rate for 2.1 hours
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Impact: Dropped calls during mobility, poor user experience in cell boundaries
+<span class="w">   </span><span class="k">-</span><span class="w"> </span>Action: Verify neighbor cell configuration; check antenna alignment and coverage overlap
 
 <span class="gu">## Capacity and Trends</span>
 
-<span class="gs">**Capacity Status:**</span>
-<span class="k">-</span><span class="w"> </span><span class="gs">**34 cells**</span> (13.8% of network) operating above 80% resource utilization
-<span class="k">-</span><span class="w"> </span><span class="gs">**Week-over-week growth**</span>: +3.2% in resource utilization
-<span class="k">-</span><span class="w"> </span><span class="gs">**Trend**</span>: Increasing demand (sustained upward trajectory)
-<span class="k">-</span><span class="w"> </span><span class="gs">**Estimated time to capacity**</span>: Approximately 45 days at current growth rate
+Capacity Status:
+<span class="k">-</span><span class="w"> </span>34 cells (13.8% of network) operating above 80% resource utilization
+<span class="k">-</span><span class="w"> </span>Week-over-week growth: +3.2% in resource utilization
+<span class="k">-</span><span class="w"> </span>Trend: Increasing demand (sustained upward trajectory)
+<span class="k">-</span><span class="w"> </span>Estimated time to capacity: Approximately 45 days at current growth rate
 
-<span class="gs">**Analysis**</span>: The consistent 3.2% weekly growth indicates strong subscriber growth or increased per-user data consumption. Without intervention, capacity constraints will begin affecting service quality within 6 weeks.
+Analysis: The consistent 3.2% weekly growth indicates strong subscriber growth or increased per-user data consumption. Without intervention, capacity constraints will begin affecting service quality within 6 weeks.
 
 <span class="gu">## Recommendations</span>
 
-<span class="gs">**Immediate (Next 24 Hours):**</span>
+Immediate (Next 24 Hours):
 <span class="k">1.</span> Investigate and resolve CELL-089 CPU overload condition
 <span class="k">2.</span> Deploy field technician to CELL-156 to diagnose packet loss source
 <span class="k">3.</span> Reconfigure handover parameters for CELL-223 and neighbor cells
 
-<span class="gs">**Short-term (Next 7 Days):**</span>
+Short-term (Next 7 Days):
 <span class="k">4.</span> Review alarm escalation procedures - 99 total alerts (3 critical, 12 major) suggest potential systemic issues
 <span class="k">5.</span> Implement automated load balancing for cells exceeding 80% utilization
 <span class="k">6.</span> Schedule proactive maintenance for cells showing degraded handover performance
 
-<span class="gs">**Strategic (Next 30-45 Days):**</span>
-<span class="k">7.</span> <span class="gs">**Capacity Expansion Required**</span>: Begin planning for additional cell sites or carrier upgrades to address 45-day capacity timeline
+Strategic (Next 30-45 Days):
+<span class="k">7.</span> Capacity Expansion Required: Begin planning for additional cell sites or carrier upgrades to address 45-day capacity timeline
 <span class="k">8.</span> Consider implementing dynamic spectrum sharing or carrier aggregation in high-demand areas
 <span class="k">9.</span> Evaluate deploying small cells in hotspot areas to offload traffic from macro cells
 
 ---
 
-<span class="gs">**Next Report**</span>: February 18, 2026  
-<span class="gs">**On-Call Engineer**</span>: Contact NOC for escalations
+Next Report: February 18, 2026  
+On-Call Engineer: Contact NOC for escalations
 </pre></div>
 <p>This report demonstrates how generative AI transforms raw IoT telemetry data into actionable business intelligence for network operations teams.</p>
 </div>
